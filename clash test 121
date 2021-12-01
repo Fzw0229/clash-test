@@ -5,7 +5,7 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇸🇬 ssh新加坡1127, server: v2raysg-5.sshstores.vip, port: 443, type: vmess, uuid: 08b1f069-f21c-41d9-92e2-f2191e8cc422, alterId: 64, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /sshstores, ws-headers: {Host: v2raysg-5.sshstores.vip}}
+  - {name: opentunnel.net-fdfrrr, server: sgv-3.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: "/opentunnel?user=opentunnel.net-fdfrrr", ws-headers: {Host: sgv-3.openv2ray.com}}
 proxy-groups:
   - name: 🚀 全局设置
     type: select
@@ -15,19 +15,19 @@ proxy-groups:
   - name: 🚀 手动选择节点
     type: select
     proxies:
-      - 🇸🇬 ssh新加坡1127
+      - opentunnel.net-fdfrrr
   - name: ♻️ 自动选择节点
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 300
     proxies:
-      - 🇸🇬 ssh新加坡1127
+      - opentunnel.net-fdfrrr
   - name: 🐟 漏网之鱼
     type: select
     proxies:
       - 🚀 全局设置
       - DIRECT
-      - 🇸🇬 ssh新加坡1127
+      - opentunnel.net-fdfrrr
 rules:
  - DOMAIN-KEYWORD,admarvel,REJECT
  - DOMAIN-KEYWORD,admaster,REJECT
